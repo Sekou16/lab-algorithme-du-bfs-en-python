@@ -19,9 +19,18 @@ eleves["Corlings"]=[]
 eleves["Abdelkrim"]=["Souleyman","Zack","Zoureni"]
 eleves["Souleyman"]=[]
 eleves["Zack"]=[]
+def personne_elue(name):
+    return name == "Zoureni"
+
+from collections import deque
 
 def search(name):
    print( len(eleves.values()) )
-   return False
+   return False   
+   search_queue = deque()
+   search_queue += eleves[name]
+   print( len(search_queue) )
+   return False  
+
 if __name__== "__main__":
-  search("Zoureni")
+      search("Boris")
